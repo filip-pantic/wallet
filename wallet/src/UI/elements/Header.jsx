@@ -1,10 +1,9 @@
-// UI/elements/Header.jsx
 import React from 'react';
-import '../styles/form-design.css'; // Updated path to reflect your directory structure
+import '../styles/form-design.css';
 
 const Header = ({ title }) => {
   return (
-    <header className="header"> {/* Optional: Added a class for more specific styling */}
+    <header className="header">
       <h1>{title}</h1>
     </header>
   );

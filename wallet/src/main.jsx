@@ -1,13 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom';
 import { Provider } from 'react-redux';
-import App from './App';  // Ensure this path is correct
-import store from './data/centralStore';  // Ensure this path is correct
-import './index.css';  // Often, this is where base styles are applied, so ensure this file exists
+import App from './App';
+import store from './data/centralStore';
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
-    const root = ReactDOM.createRoot(rootElement);
+    const root = createRoot(rootElement);
     root.render(
         <React.StrictMode>
             <Provider store={store}>

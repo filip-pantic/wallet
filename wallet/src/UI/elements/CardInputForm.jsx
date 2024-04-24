@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { addCard } from '../logic/CardManager'; // Adjusted to new path
-import '../styles/form-design.css'; // Ensure this path is correct
+import { addCard } from '../logic/CardManager';
+import '../styles/form-design.css';
 
 const CardInputForm = ({ cardDetails, setCardDetails }) => {
   const dispatch = useDispatch();

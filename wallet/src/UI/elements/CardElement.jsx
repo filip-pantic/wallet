@@ -1,14 +1,13 @@
-// UI/elements/CardElement.jsx
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeCard } from '../logic/CardManager'; // Update the path as per your project structure
+import { removeCard } from '../logic/CardManager';
 import BitcoinIcon from '../../assets/vendor-bitcoin.svg';
 import BlockchainIcon from '../../assets/vendor-blockchain.svg';
 import EvilIcon from '../../assets/vendor-evil.svg';
 import NinjaIcon from '../../assets/vendor-ninja.svg';
 import ChipDark from '../../assets/chip-dark.svg';
 import ChipLight from '../../assets/chip-light.svg';
-import '../styles/theme-modes.css'; // Update the path as per your project structure
+
 
 const getVendorClass = (vendor) => {
   return `card card-preview color-${vendor.replace(/\s+/g, '-').toLowerCase()}`;
@@ -41,7 +40,7 @@ const CardElement = ({ cardData, active }) => {
     return vendor === 'bitcoin-inc' ? ChipDark : ChipLight;
   };
 
-  const cardClass = getVendorClass(cardData.vendor) + (active ? ' active' : '');
+  const cardClass = getVendorClass(cardData.vendor) + (active ? ' active-card' : ' inactive');
 
   return (
     <div className={cardClass}>
@@ -60,7 +59,6 @@ const CardElement = ({ cardData, active }) => {
       </div>
       {active && (
         <button className="card-remove-btn" onClick={handleRemove}>
-
           Remove
         </button>
       )}

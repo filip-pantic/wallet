@@ -1,4 +1,3 @@
-// data/cardManager.js
 import { createSlice } from '@reduxjs/toolkit';
 
 export const cardManagerSlice = createSlice({
@@ -10,7 +9,6 @@ export const cardManagerSlice = createSlice({
   },
   reducers: {
     addCard: (state, action) => {
-      // Direct mutation is okay in createSlice due to Immer library
       state.cards.push(action.payload);
     },
     removeCard: (state, action) => {
@@ -18,7 +16,6 @@ export const cardManagerSlice = createSlice({
       if (index !== -1) {
         state.cards.splice(index, 1);
       }
-      // Side effects like localStorage should be handled in middleware or component lifecycle, not in reducers
     },
     setActiveCard: (state, action) => {
       state.activeCardIndex = action.payload;
@@ -38,7 +35,6 @@ export const cardManagerSlice = createSlice({
   },
 });
 
-// Export actions
 export const { 
   addCard, 
   removeCard, 
@@ -48,5 +44,4 @@ export const {
   updateCardOrder 
 } = cardManagerSlice.actions;
 
-// Export reducer
 export default cardManagerSlice.reducer;

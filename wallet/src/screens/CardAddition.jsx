@@ -1,8 +1,6 @@
-// screens/CardAddition.js
-
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addCard } from '../UI/logic/CardManager'; // Corrected import path
+import { addCard } from '../UI/logic/CardManager';
 import { useNavigate } from 'react-router-dom';
 import Header from '../UI/elements/Header';
 import CardInputForm from '../UI/elements/CardInputForm';
@@ -11,8 +9,8 @@ import BitcoinIcon from '../assets/vendor-bitcoin.svg';
 import BlockchainIcon from '../assets/vendor-blockchain.svg';
 import EvilIcon from '../assets/vendor-evil.svg';
 import NinjaIcon from '../assets/vendor-ninja.svg';
-import ChipDark from '../assets/chip-dark.svg'; // Import chip image
-import '../UI/styles/form-design.css'; // Ensure this path is correct according to your project structure
+import ChipDark from '../assets/chip-dark.svg';
+import '../UI/styles/form-design.css';
 
 const CardAddition = () => {
   const dispatch = useDispatch();
@@ -25,7 +23,6 @@ const CardAddition = () => {
     vendor: '',
   });
 
-  // Define the vendor icons
   const vendorIcons = {
     'bitcoin-inc': BitcoinIcon,
     'block-chain-inc': BlockchainIcon,
@@ -34,8 +31,8 @@ const CardAddition = () => {
   };
 
   const handleAddCard = (cardDetails) => {
-    dispatch(addCard(cardDetails)); // Dispatches an action to add a card
-    navigate('/'); // Navigate to the home screen after adding a card
+    dispatch(addCard(cardDetails));
+    navigate('/');
   };
 
   const handleVendorChange = (e) => {
@@ -50,9 +47,7 @@ const CardAddition = () => {
     <div className="add-card">
       <Header title="ADD A NEW BANK CARD" />
       <div className={`card-preview color-${cardDetails.vendor}`}>
-        {/* Render chip image */}
         <img src={ChipDark} className="card-chip" alt="Chip" />
-        {/* Render card details */}
         <div className="card-number">{cardDetails.number || 'xxxx xxxx xxxx xxxx'}</div>
         <div className="card-holder-expiry">
           <div className="card-holder-section">
@@ -64,7 +59,6 @@ const CardAddition = () => {
             <span className="card-expiry">{cardDetails.expiry || 'MM/YY'}</span>
           </div>
         </div>
-        {/* Render vendor icon */}
         {cardDetails.vendor && vendorIcons[cardDetails.vendor] && (
           <img
             src={vendorIcons[cardDetails.vendor]}
@@ -77,7 +71,7 @@ const CardAddition = () => {
         cardDetails={cardDetails}
         setCardDetails={setCardDetails}
         onSubmit={handleAddCard}
-        onVendorChange={handleVendorChange} // Pass the handler to the CardInputForm
+        onVendorChange={handleVendorChange}
       />
     </div>
   );

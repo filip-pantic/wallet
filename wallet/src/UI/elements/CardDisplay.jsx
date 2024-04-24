@@ -1,12 +1,11 @@
-// UI/elements/CardDisplay.jsx
 import React from 'react';
-import BitcoinIcon from '../../assets/vendor-bitcoin.svg'; // Updated path
-import BlockchainIcon from '../../assets/vendor-blockchain.svg'; // Updated path
-import EvilIcon from '../../assets/vendor-evil.svg'; // Updated path
-import NinjaIcon from '../../assets/vendor-ninja.svg'; // Updated path
-import ChipDark from '../../assets/chip-dark.svg'; // Updated path
-import ChipLight from '../../assets/chip-light.svg'; // Updated path
-import '../styles/form-design.css'; // Updated path
+import BitcoinIcon from '../../assets/vendor-bitcoin.svg';
+import BlockchainIcon from '../../assets/vendor-blockchain.svg';
+import EvilIcon from '../../assets/vendor-evil.svg';
+import NinjaIcon from '../../assets/vendor-ninja.svg';
+import ChipDark from '../../assets/chip-dark.svg';
+import ChipLight from '../../assets/chip-light.svg';
+import '../styles/form-design.css';
 
 const CardDisplay = ({ cardDetails }) => {
   const getVendorIcon = (vendor) => {
@@ -47,7 +46,7 @@ const CardDisplay = ({ cardDetails }) => {
   const cardColorClass = getCardColorClass(cardDetails.vendor);
 
   return (
-    <div className={`card-display ${cardColorClass}`}> {/* Changed the class name to card-display */}
+    <div className={`card-display ${cardColorClass}`}>
       {chipImageSrc && <img src={chipImageSrc} className="card-chip" alt="Chip" />}
       {vendorIconSrc && <img src={vendorIconSrc} className="card-vendor-icon" alt="Vendor Icon" />}
       <div className="card-number">{cardDetails.number || 'xxxx xxxx xxxx xxxx'}</div>
