@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import Header from '../UI/elements/Header';
 import CardGroup from '../UI/elements/CardGroup';
 import { Link } from 'react-router-dom';

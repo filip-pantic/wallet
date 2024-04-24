@@ -4,7 +4,6 @@ import { addCard } from '../UI/logic/CardManager';
 import { useNavigate } from 'react-router-dom';
 import Header from '../UI/elements/Header';
 import CardInputForm from '../UI/elements/CardInputForm';
-import CardDisplay from '../UI/elements/CardDisplay';
 import BitcoinIcon from '../assets/vendor-bitcoin.svg';
 import BlockchainIcon from '../assets/vendor-blockchain.svg';
 import EvilIcon from '../assets/vendor-evil.svg';
