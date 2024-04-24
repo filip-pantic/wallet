@@ -1,0 +1,165 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Mono', monospace;
+}
+
+.card-preview {
+  width: 450px;
+  height: 275px;
+  background-color: rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.08);
+  margin: 20px auto;
+  position: relative;
+  padding: 20px;
+}
+
+.card-preview .card-chip {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+}
+
+.card-preview .card-vendor-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+}
+
+.card-preview .card-number {
+  font-size: 1.5em; 
+  letter-spacing: 2px; 
+  white-space: nowrap;
+  color: #000000;
+  position: absolute;
+  top: 55%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-preview .card-holder-expiry {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-preview .card-holder-section,
+.card-preview .card-expiry-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-preview .card-info-label {
+  font-size: 0.7em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.card-form-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.card-form-container form {
+  display: grid;
+  gap: 10px;
+}
+
+.card-form-container input,
+.card-form-container select {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #CCC;
+  border-radius: 5px; 
+  box-sizing: border-box;
+}
+
+
+.card-form-container .input-pair {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.card-preview.color-bitcoin-inc {
+  background-color: #FFAE34;
+}
+
+.card-preview.color-block-chain-inc {
+  background-color: #8B58F9;
+}
+
+.card-preview.color-evil-corp {
+  background-color: #F33355;
+}
+
+.card-preview.color-ninja-bank {
+  background-color: #222222;
+}
+
+.card-preview.color-block-chain-inc .card-holder,
+.card-preview.color-block-chain-inc .card-expiry,
+.card-preview.color-block-chain-inc .card-info-label,
+.card-preview.color-block-chain-inc .card-number,
+.card-preview.color-evil-corp .card-holder,
+.card-preview.color-evil-corp .card-expiry,
+.card-preview.color-evil-corp .card-info-label,
+.card-preview.color-evil-corp .card-number,
+.card-preview.color-ninja-bank .card-holder,
+.card-preview.color-ninja-bank .card-expiry,
+.card-preview.color-ninja-bank .card-info-label,
+.card-preview.color-ninja-bank .card-number {
+  color: #ffffff;
+  font-family: 'PT Mono', monospace;
+}
+
+.add-card-link {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.add-card-link:hover {
+  background-color: #f0f0f0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #FFF;
+  margin-bottom: -40px;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .card-preview {
+    max-width: 85%;
+    height: 25vh;
+  }
+
+  .home-link {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .card-form-container {
+    width: 95%;
+  }
+}
